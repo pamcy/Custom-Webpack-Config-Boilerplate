@@ -1,0 +1,16 @@
+.column {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column__item {
+  .column--3 & {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+
+    @include media('below-tablet') {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
