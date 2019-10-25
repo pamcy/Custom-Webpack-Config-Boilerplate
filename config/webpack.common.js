@@ -55,7 +55,7 @@ module.exports = {
         options: {
           name: '[path][name].[ext]',
           context: 'src', // prevent display of src/ in filename
-          outputPath: 'images'
+          publicPath: '../',
         },
       },
     ],
