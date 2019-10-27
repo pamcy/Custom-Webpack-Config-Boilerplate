@@ -17,17 +17,18 @@ Clone this repo and install
 npm install
 ```
 
-### Development Server
+## Usage
+**Development Server**
 ```
 npm run start
 ```
 
-### Production Build
+**Production Build**
 ```
 npm run build
 ```
 
-## Master Branch
+## Dependencies
 
 ### Webpack
 - [webpack](https://webpack.js.org/): Module bundler
