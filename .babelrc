@@ -1,16 +1,15 @@
 {
   "presets": [
-		["@babel/preset-env", {
-			"useBuiltIns": "usage", // Based on your code and targets, core-js polyfills will add automatically.
-      "corejs": "3.0.0",
-      "targets": {
-        "browsers": [
-          "last 2 versions",
-          "ie >= 11"
-        ]
-      },
-      "debug":true
-		}]
-	],
-  "plugins": ["@babel/plugin-proposal-class-properties"]
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage", // Based on your code and targets, core-js polyfills will add automatically.
+        "corejs": "3.0.0",
+        "targets": {
+          "browsers": ["last 2 versions", "ie >= 11"]
+        },
+        "debug": true
+      }
+    ]
+  ]
 }

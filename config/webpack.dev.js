@@ -7,11 +7,12 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map', // control how source maps are generated
   devServer: {
-    contentBase: paths.build,
+    port: 8080,
     open: true,
     compress: true,
     hot: true, // enable webpack's Hot Module Replacement
-    port: 8080,
+    watchContentBase: true, // watch for changes in all files that are located in contentBase dir.
+    contentBase: paths.src,
   },
   plugins: [
     /**
@@ -19,13 +20,5 @@ module.exports = merge(common, {
      * Only update what has changed.
      */
     new webpack.HotModuleReplacementPlugin(),
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.html$/,
-        loader: 'raw-loader', // watch and reload HTML
-      },
-    ],
-  },
+  ]
 });

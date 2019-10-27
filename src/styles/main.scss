@@ -1,0 +1,28 @@
+.container {
+  @extend %flex-center;
+
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.demo__img {
+  margin-bottom: rem(20);
+}
+
+.demo__title {
+  @extend %heading--28;
+
+  margin-bottom: rem(20);
+}
+
+.demo__btn {
+  padding: rem(10) rem(20);
+  border-radius: 5px;
+  background-color: $green;
+  color: $white;
+  transition: opacity 0.7s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

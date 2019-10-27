@@ -33,19 +33,19 @@ module.exports = merge(common, {
     })
   ],
   module: {
-    rules: [
-      {
-        test: /\.(scss|css)$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
+    rules: [{
+      test: /\.(scss|css)$/,
+      use: [{
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            publicPath: '../', // override output.publicPath, so css background-image path will be prepended with "../"
           },
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
-        ],
-      }
-    ],
+        },
+        'css-loader',
+        'postcss-loader',
+        'sass-loader',
+      ],
+    }],
   },
   optimization: {
     // Production minimizing of JavaSvript and CSS assets.

@@ -1,3 +1,3 @@
 export default function helloWorld() {
-  alert('Hello, nice to see you!')
+  alert('Come to the dark side')
 }
